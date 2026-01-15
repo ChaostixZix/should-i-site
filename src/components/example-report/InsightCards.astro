@@ -1,0 +1,75 @@
+---
+import Section from '../Section.astro';
+
+const insights = [
+  {
+    index: "01",
+    title: "Who actually lives within reach of your business matters more than foot traffic.",
+    stat: "78% of the local catchment were classified as “Convenience Pragmatists”",
+    details: ["Price sensitivity was high", "Travel tolerance was low"],
+    implication: "Premium positioning would struggle regardless of marketing spend."
+  },
+  {
+    index: "02",
+    title: "Competition density quietly caps your upside.",
+    stat: "11 direct competitors within a 10-minute drive",
+    details: ["4 offering aggressive price discounting", "Flat population growth over five years"],
+    implication: "Expansion increases operational risk without increasing total demand."
+  },
+  {
+    index: "03",
+    title: "Revenue potential is only half the equation.",
+    stat: "Margins compressed below sustainable thresholds even with optimistic assumptions",
+    details: ["Rising fixed costs absorbed most growth"],
+    implication: "The decision wasn’t “bad” — it was mistimed."
+  }
+];
+---
+
+<Section class="pb-32 lg:pb-48 relative z-20"> {/* Increased padding bottom to clear the rounded overlap below */}
+  
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    
+    {insights.map((item) => (
+      <div class="bg-[var(--surface)]  rounded-2xl p-8 lg:p-10 flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-300 group relative border border-gray-100">
+        
+        {/* Number Badge */}
+        <div class="text-[var(--accent)] text-4xl font-bold opacity-30 group-hover:opacity-100 transition-opacity mb-6">
+          {item.index}
+        </div>
+
+        {/* Heading */}
+        <h3 class="text-xl font-bold text-[var(--text)] leading-tight mb-8 min-h-[56px] group-hover:text-[var(--accent)] transition-colors">
+          {item.title}
+        </h3>
+
+        {/* Highlighted Stat */}
+        <div class="mb-6 p-4 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
+           <div class="text-lg font-bold text-[var(--text)] leading-tight">
+             {item.stat}
+           </div>
+        </div>
+           
+        {/* Bullets */}
+        <ul class="space-y-3 mb-8 grow">
+           {item.details.map(detail => (
+             <li class="text-[var(--text-muted)] text-sm flex items-start gap-3">
+               <span class="block w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-1.5 shrink-0"></span>
+               {detail}
+             </li>
+           ))}
+        </ul>
+
+        {/* Implication (Footer) */}
+        <div class="border-t border-[var(--border)] pt-6 mt-auto">
+          <span class="block text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-2">The Implication</span>
+          <p class="text-[var(--text)] font-medium text-sm leading-relaxed">
+            {item.implication}
+          </p>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+</Section>

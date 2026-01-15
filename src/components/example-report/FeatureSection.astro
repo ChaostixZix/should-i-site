@@ -1,0 +1,57 @@
+---
+import Section from '../Section.astro';
+import InsightBlock from '../InsightBlock.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  align?: 'left' | 'right';
+  insightTitle: string;
+  insightIcon: string;
+  insightStats: string[];
+  insightDescription?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  align = 'left', 
+  insightTitle, 
+  insightIcon, 
+  insightStats,
+  insightDescription 
+} = Astro.props;
+---
+
+<Section class="py-20 lg:py-32 border-b border-[var(--border)]">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+    
+    {/* Text Side - rendered first if align is left, second if right */}
+    <div class:list={[
+      "lg:col-span-4 flex flex-col justify-center",
+      align === 'right' ? "lg:order-2" : "lg:order-1"
+    ]}>
+      <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] leading-tight mb-6">
+        {title}
+      </h2>
+      <p class="text-lg text-[var(--text-muted)] leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+
+    {/* Insight Card Side - rendered second if align is left, first if right */}
+    <div class:list={[
+      "lg:col-span-8",
+      align === 'right' ? "lg:order-1" : "lg:order-2"
+    ]}>
+      <InsightBlock 
+        variant="card"
+        title={insightTitle}
+        icon={insightIcon}
+        description={insightDescription}
+        bullets={insightStats}
+      />
+    </div>
+
+  </div>
+</Section>

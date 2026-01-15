@@ -46,11 +46,24 @@ Use these exact values:
 
 Reference sites (copy the level of **restraint**, not the templates):
 
-- **Stripe:** https://stripe.com/payments
-- **Linear:** https://linear.app
-- **Basecamp:** https://basecamp.com/shapeup
+### Stripe (5 screenshots)
+- [Hero](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/stripe_1_hero.png)
+- [Features](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/stripe_2_features.png)
+- [Analytics](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/stripe_3_analytics.png)
+- [More](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/stripe_4_more.png)
+- [Footer](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/stripe_5_footer.png)
+
+### Linear (3 screenshots)
+- [Hero](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/linear_1_hero.png)
+- [Features](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/linear_2_features.png)
+- [More](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/linear_3_more.png)
+
+### Basecamp (2 screenshots)
+- [Hero](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/basecamp_1_hero.png)
+- [Content](file:///Users/bintangputra/Downloads/websitebrief/docs/design/references/basecamp_2_content.png)
 
 > "Build Should-I with Stripe's restraint, Linear's simplicity, and Basecamp's editorial calm — if anything feels flashy or clever, remove it."
+
 
 ---
 

@@ -16,23 +16,50 @@
 
 @layer base {
   :root {
+    /* Colors */
     --bg: #F7F8FA;
+    /* Background */
     --surface: #FFFFFF;
+    /* Cards/frames */
     --text: #111827;
+    /* Body text */
     --text-muted: #6B7280;
+    /* Secondary text */
     --border: #E5E7EB;
+    /* Dividers */
     --accent: #0E7490;
-    --font-family: 'Inter', sans-serif;
+    /* CTAs only - use sparingly */
+
+    /* Typography */
+    --font-family: 'Inter', system-ui, sans-serif;
+    --fs-hero: clamp(40px, 6vw, 72px);
+    /* Hero headlines - responsive */
+    --fs-h2: 48px;
+    /* Section headlines */
+    --fs-h3: 20px;
+    /* Sub-headlines */
+    --fs-body: 16px;
+    /* Body text */
+
+    /* Spacing */
+    --section-padding: 160px;
+    /* Vertical space between sections (desktop) */
+    --section-padding-mobile: 80px;
     --container-max: 1280px;
+    /* Max content width */
+    --container-padding: 48px;
+    /* Horizontal padding */
   }
 
   body {
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font-family);
+    font-size: var(--fs-body);
     -webkit-font-smoothing: antialiased;
   }
 }
+
 
 .editorial-text {
   line-height: 1.6;
