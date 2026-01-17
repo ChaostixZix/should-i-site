@@ -1,0 +1,62 @@
+---
+const reports = [
+    {
+        title: "Market Validation",
+        description:
+            "Is there real demand where customers are actually willing to engage?",
+        icon: "insert_chart",
+    },
+    {
+        title: "Competitor Intelligence",
+        description:
+            "Who truly owns the market — and how crowded is it beneath the surface?",
+        icon: "groups",
+    },
+    {
+        title: "Digital Presence",
+        description:
+            "How visible and competitive the business really is online.",
+        icon: "language",
+    },
+    {
+        title: "Operational Effectiveness",
+        description:
+            "Where execution friction, inefficiencies, or constraints are holding performance back.",
+        icon: "settings",
+    },
+    {
+        title: "Business Viability",
+        description:
+            "Whether the numbers, structure, and risk profile leave room for error.",
+        icon: "verified_user",
+    },
+];
+---
+
+<div class="w-full max-w-4xl mx-auto">
+    <div
+        class="space-y-0 border border-[var(--border)] rounded-lg overflow-hidden bg-white shadow-sm"
+    >
+        {
+            reports.map((report, index) => (
+                <div
+                    class={`flex flex-col md:flex-row items-start md:items-center gap-6 p-8 ${index !== reports.length - 1 ? "border-b border-[var(--border)]" : ""} hover:bg-[var(--surface)] transition-colors`}
+                >
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[var(--accent)]/10">
+                        <span class="material-symbols-outlined text-[var(--accent)] text-2xl">
+                            {report.icon}
+                        </span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--text)] mb-1">
+                            {index + 1}. {report.title}
+                        </h3>
+                        <p class="text-[var(--text-muted)] leading-relaxed">
+                            {report.description}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>

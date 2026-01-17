@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import InsightBlock from "../components/InsightBlock.astro";
 import Divider from "../components/Divider.astro";
 import CTABlock from "../components/CTABlock.astro";
 import ReportMockup from "../components/mockups/ReportMockup.astro";
+import SuiteComponent from "../components/SuiteComponent.astro";
+import TrustDataComponent from "../components/TrustDataComponent.astro";
 ---
 
 <BaseLayout title="Home">
@@ -19,36 +20,41 @@ import ReportMockup from "../components/mockups/ReportMockup.astro";
 			<h1
 				class="font-black text-[var(--text)] text-5xl sm:text-6xl md:text-8xl leading-[1.05] tracking-[-0.04em] mb-6"
 			>
-				Make <span class="text-[var(--accent)]">better</span> business decisions
-				— before the consequences are hard to reverse.
+				Decision intelligence for small businesses
 			</h1>
+			<p class="text-2xl sm:text-3xl font-bold text-[var(--text)] mb-8">
+				— before you commit capital, time, or people.
+			</p>
 			<p
-				class="text-lg sm:text-xl font-medium text-[var(--text-muted)] max-w-2xl mb-8"
+				class="max-w-[800px] text-xl sm:text-2xl text-[var(--text-muted)] font-medium leading-tight mb-8"
 			>
-				Independent, industry-specific analysis to assess market demand,
-				competition, and viability before you act.
+				Most business decisions fail quietly — not because the idea was
+				bad, but because the reality underneath it wasn't fully
+				understood.
 			</p>
 			<p
 				class="max-w-[800px] text-xl sm:text-2xl text-[var(--text-muted)] font-medium leading-tight mb-12"
 			>
-				Most owners make big calls with incomplete information. Should-I
-				shows you what’s actually happening on the ground before you
-				commit capital.
+				Should-I helps small businesses answer one hard question: <em
+					>Should we do this?</em
+				> For launches, expansions, acquisitions, pricing changes, and strategic
+				pivots. Using industry-specific data, structured analysis, and on-demand
+				AI consultants built for real decisions — not generic advice.
 			</p>
-			<div class="flex flex-col sm:flex-row gap-4 mb-16">
+			<div class="flex flex-col sm:flex-row gap-4 mb-8">
 				<CTABlock
-					href="https://go.should-i.ai/health-check"
+					href="https://go.should-i.ai/health-check?segment=pre-launch"
 					variant="primary"
 					class="px-10 py-5 text-lg font-bold"
 				>
-					Free Business Health Check
+					Validate My Idea
 				</CTABlock>
 				<CTABlock
-					href="/example-report"
-					variant="secondary"
+					href="https://go.should-i.ai/health-check?segment=existing"
+					variant="primary"
 					class="px-10 py-5 text-lg font-bold"
 				>
-					View Example Report
+					Assess My Business
 				</CTABlock>
 			</div>
 
@@ -74,228 +80,311 @@ import ReportMockup from "../components/mockups/ReportMockup.astro";
 			<div class="lg:col-span-4">
 				<span
 					class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
-					>The Problem</span
+					>For people like us</span
 				>
 				<h2
 					class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] leading-tight"
 				>
-					The most expensive mistakes usually feel reasonable at the
-					time.
+					The most expensive mistakes feel reasonable at the time
 				</h2>
 			</div>
 			<div class="lg:col-span-8">
 				<p
 					class="text-2xl font-light leading-relaxed text-[var(--text-muted)]"
 				>
-					Most business failures don’t come from bad ideas. They come
-					from blind spots — important constraints that weren’t
-					visible early enough.
+					Most business failures don't come from bad ideas. They come
+					from blind spots that only show up after money, time, and
+					energy are committed.
 				</p>
 				<p
 					class="mt-6 text-lg text-[var(--text-muted)] leading-relaxed"
 				>
-					For example, a location can look viable on paper, but fail
-					quietly once travel tolerance, competitor clustering just
-					outside the visible strip, or local pricing sensitivity is
-					properly understood.
+					For example, a location can look viable on paper — but
+					quietly fail once travel tolerance, competitor clustering
+					just outside the visible strip, or local pricing sensitivity
+					are properly understood.
 				</p>
-				<div
-					class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-[var(--border)] pt-12"
+				<p class="mt-8 text-xl font-bold text-[var(--text)]">
+					Should-I surfaces these realities early — while the decision
+					is still reversible.
+				</p>
+			</div>
+		</div>
+	</Section>
+
+	<Divider />
+
+	<!-- WHAT SHOULD-I IS -->
+	<Section class="py-20 lg:py-40">
+		<div class="mx-auto max-w-4xl text-center">
+			<span
+				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+				>Short explainer</span
+			>
+			<h2
+				class="text-4xl lg:text-5xl font-black text-[var(--text)] mb-8 tracking-tight"
+			>
+				What Should-I is
+			</h2>
+			<div
+				class="space-y-6 text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mx-auto"
+			>
+				<p>
+					Should-I is a decision-intelligence platform for small
+					businesses.
+				</p>
+				<p>
+					It sits between instinct and action — combining live market
+					data, competitive intelligence, operational signals, and
+					plain-English analysis so decisions are grounded in reality,
+					not guesswork.
+				</p>
+				<p
+					class="font-bold text-[var(--text)] pt-4 border-t border-[var(--border)] mt-8"
 				>
-					<InsightBlock
-						title="Missing Demand Data"
-						description="Going where the people are isn't enough. You need to know where they spend, not just where they live."
-					/>
-					<InsightBlock
-						title="Saturation Blindness"
-						description="A busy street can still be a graveyard for new businesses if the local capacity is already peaked."
-					/>
+					We don't tell you what to do. We show you what's actually
+					happening — and why it matters.
+				</p>
+			</div>
+		</div>
+	</Section>
+
+	<!-- WHO IT'S FOR -->
+	<Section
+		class="py-20 lg:py-40 bg-[var(--surface)] border-y border-[var(--border)]"
+	>
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+			<div class="lg:col-span-4">
+				<span
+					class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+					>Keeps both audiences engaged</span
+				>
+				<h2
+					class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]"
+				>
+					Who this is for
+				</h2>
+			</div>
+			<div class="lg:col-span-8">
+				<div
+					class="space-y-8 text-2xl font-light leading-relaxed text-[var(--text-muted)]"
+				>
+					<p>
+						Are you about to launch, expand, acquire, or relocate a
+						business — and want to know if it's actually viable?
+					</p>
+					<p>
+						Are you already operating, but feel like you're treading
+						water and don't know where the friction really is?
+					</p>
+					<p class="font-bold text-[var(--text)]">
+						You're making high-stakes decisions with incomplete,
+						disconnected information.
+					</p>
+					<p class="text-xl">Should-I exists to close that gap.</p>
 				</div>
 			</div>
 		</div>
 	</Section>
 
-	<!-- Process Section (Solution) -->
-	<Section id="process" class="bg-white border-y border-[var(--border)]">
-		<div class="mb-16 md:mb-24">
-			<h2
-				class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]"
+	<!-- HOW IT WORKS -->
+	<Section
+		id="process"
+		class="py-20 lg:py-40 border-b border-[var(--border)]"
+	>
+		<div class="mb-16 md:mb-24 text-center">
+			<span
+				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+				>Analyst-first, not salesy</span
 			>
-				Should-I gives you clarity before you decide.
+			<h2
+				class="text-4xl lg:text-5xl font-black text-[var(--text)] leading-tight mb-6"
+			>
+				How Should-I works
 			</h2>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 px-4"
+		>
 			<InsightBlock
 				variant="step"
 				index="01"
-				title="You tell us about your business and decision."
+				title="You tell us about the business or decision you're considering"
 			/>
 			<InsightBlock
 				variant="step"
 				index="02"
-				title="We analyse demand, competition, catchment behaviour, and economics."
+				title="We analyse real market, competitor, digital, and operational data — specific to your industry"
 			/>
 			<InsightBlock
 				variant="step"
 				index="03"
-				title="You receive a clear, decision-ready report — not a dashboard — explaining what the data means and why it matters for your decision."
+				title="You receive a decision-ready report that explains what the data means, why it matters, and where risk actually sits"
 			/>
 			<InsightBlock
 				variant="step"
 				index="04"
-				title="You decide your next move with confidence."
+				title="You decide the next move with clarity — not confidence theatre"
 			/>
 		</div>
 		<div
-			class="text-center pt-8 border-t border-gray-100 max-w-2xl mx-auto"
+			class="text-center pt-8 border-t border-[var(--border)] max-w-2xl mx-auto"
 		>
-			<p class="text-xl font-medium text-[var(--text-muted)] italic">
-				"We don't tell you what to do. We show you what's true."
+			<p class="text-xl font-bold text-[var(--text-muted)]">
+				This is a decision document, not a dashboard.
 			</p>
 		</div>
 	</Section>
 
-	<!-- Industries Section -->
-	<Section id="industries">
-		<div class="mb-16">
-			<span
-				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
-				>Specialized Intelligence</span
-			>
-			<h2
-				class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]"
-			>
-				Built for specific industries — because context matters.
-			</h2>
-		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			<InsightBlock
-				variant="card"
-				icon="local_laundry_service"
-				title="Laundromats"
-				description="Demand, saturation, pricing pressure, and location viability."
-				bullets={[
-					"Local Demand Analysis",
-					"Competitive Saturation",
-					"Pricing Pressure Signals",
-					"Location Risk Assessment",
-				]}
-			/>
-			<InsightBlock
-				variant="card"
-				icon="dentistry"
-				title="Dental Practices"
-				description="Patient access, competition, and growth constraints."
-				bullets={[
-					"Patient Access Metrics",
-					"Catchment Competition",
-					"Growth Constraint Signals",
-					"Payer Mix Indicators",
-				]}
-			/>
-		</div>
-		<div class="mt-12 text-center">
-			<CTABlock
-				href="/industries"
-				variant="secondary"
-				class="inline-flex"
-			>
-				View all industries →
-			</CTABlock>
-		</div>
-	</Section>
-
-	<!-- Proof Section -->
-	<Section class="bg-[var(--surface)] border-y border-[var(--border)]">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-			<div>
-				<h2
-					class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] mb-6"
+	<!-- DIFFERENTIATION -->
+	<Section
+		class="py-20 lg:py-40 bg-[var(--surface)] border-b border-[var(--border)]"
+	>
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+			<div class="lg:col-span-6">
+				<span
+					class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+					>Quiet differentiation</span
 				>
-					This isn’t generic AI output.
+				<h2 class="text-4xl font-bold text-[var(--text)] mb-6">
+					Why this isn't "just AI"
 				</h2>
-				<p class="text-lg text-[var(--text-muted)] mb-8">
-					Your report is built on top of proprietary datasets and
-					industry-specific models designed to find red flags that
-					generic tools miss.
-				</p>
-				<div class="space-y-4">
-					{
-						[
-							"Local demand and catchment analysis",
-							"Competitive density and saturation signals",
-							"Economic viability indicators",
-							"Clear red flags and opportunity zones",
-							"Plain-English implications for your decision",
-						].map((item) => (
-							<div class="flex items-center gap-3">
-								<span class="material-symbols-outlined text-[var(--accent)]">
-									check_circle
-								</span>
-								<span class="font-medium text-[var(--text)]">
-									{item}
-								</span>
-							</div>
-						))
-					}
-				</div>
-				<div class="mt-10">
-					<CTABlock href="/example-report" variant="secondary">
-						View example report →
-					</CTABlock>
+				<div class="space-y-6 text-lg text-[var(--text-muted)]">
+					<p>
+						General AI tools are useful for ideas and explanations.
+						They are not built for decisions.
+					</p>
+					<p>Should-I combines:</p>
+					<ul class="space-y-4">
+						<li class="flex items-center gap-3">
+							<span
+								class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"
+							></span>
+							<span>Live, industry-specific data</span>
+						</li>
+						<li class="flex items-center gap-3">
+							<span
+								class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"
+							></span>
+							<span
+								>Deterministic scoring and structured analysis</span
+							>
+						</li>
+						<li class="flex items-center gap-3">
+							<span
+								class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"
+							></span>
+							<span
+								>AI used as an interpreter — not the source of
+								truth</span
+							>
+						</li>
+					</ul>
+					<p class="pt-4 font-bold text-[var(--text)]">
+						The result is consistent, explainable insight that holds
+						up when money is on the line.
+					</p>
 				</div>
 			</div>
-
-			<div class="flex items-center justify-center">
+			<div class="lg:col-span-6 flex justify-center">
 				<ReportMockup class="scale-90 lg:scale-100" />
 			</div>
 		</div>
 	</Section>
 
-	<!-- Philosophy Section (About) -->
-	<Section id="about" class="bg-white border-t border-[var(--border)]">
-		<div class="mx-auto max-w-[800px] text-center">
+	<!-- THE SUITE -->
+	<Section class="py-20 lg:py-40">
+		<div class="mb-20 text-center max-w-3xl mx-auto">
 			<span
-				class="material-symbols-outlined text-[var(--accent)] text-4xl mb-6"
-				>verified_user</span
+				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+				>This is where the shift happens</span
 			>
 			<h2
-				class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] mb-8"
+				class="text-4xl lg:text-5xl font-black text-[var(--text)] mb-8 tracking-tight"
 			>
-				Designed to reduce regret — not sell you a story.
+				The Should-I Intelligence Suite
 			</h2>
-			<div class="text-left md:text-center space-y-6">
-				<p class="text-lg text-[var(--text-muted)] leading-relaxed">
-					In a world of "move fast and break things," we believe in
-					measuring twice and cutting once. Our reports are designed
-					to be skeptical. We look for reasons <em>not</em> to invest, so
-					when you finally do, you move forward with absolute conviction.
-				</p>
-			</div>
+			<p class="text-xl text-[var(--text-muted)] leading-relaxed">
+				Every decision starts with viability. Once that foundation is
+				established, Should-I builds a complete understanding of the
+				business or idea — across market demand, competition, digital
+				presence, operations, and financial viability.
+			</p>
+		</div>
+		<SuiteComponent />
+		<div class="mt-16 text-center">
+			<p class="text-lg font-bold text-[var(--text-muted)] italic">
+				These reports work together as a system — not standalone PDFs.
+			</p>
 		</div>
 	</Section>
 
-	<!-- Final CTA Section -->
-	<Section class="bg-[var(--bg)] border-t border-[var(--border)] py-24">
-		<div
-			class="mx-auto max-w-[600px] flex flex-col items-center text-center"
-		>
-			<h2 class="text-3xl font-bold text-[var(--text)] mb-6">
-				If this decision matters, clarity is worth a few minutes.
-			</h2>
-			<p class="text-[var(--text-muted)] mb-8">
-				Your next big decision shouldn't be a gamble. Let's look at the
-				numbers together.
-			</p>
-			<CTABlock
-				href="https://go.should-i.ai/health-check"
-				variant="primary"
-				class="w-full sm:w-auto px-10"
+	<!-- TRUST & DATA -->
+	<Section
+		class="py-20 lg:py-40 bg-[var(--surface)] border-y border-[var(--border)]"
+	>
+		<div class="mb-16 text-center max-w-3xl mx-auto">
+			<span
+				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+				>Lightweight but credible</span
 			>
-				Free Business Health Check
-			</CTABlock>
-			<p class="mt-4 text-xs text-[var(--text-muted)]">
-				No obligation. Real insight. Clear thinking.
+			<h2
+				class="text-4xl font-bold text-[var(--text)] mb-6 tracking-tight"
+			>
+				Grounded in real data
+			</h2>
+			<p class="text-lg text-[var(--text-muted)]">
+				Our analysis draws from authoritative sources, continuously
+				updated and interpreted within the context of your specific
+				industry and location.
+			</p>
+		</div>
+		<TrustDataComponent />
+		<p class="text-center mt-8 text-xl font-bold text-[var(--text)]">
+			All findings are interpreted through the lens of how small
+			businesses actually operate — not abstract models.
+		</p>
+	</Section>
+
+	<!-- FINAL CTA -->
+	<Section
+		class="bg-[var(--bg)] border-t border-[var(--border)] py-24 lg:py-40"
+	>
+		<div
+			class="mx-auto max-w-[800px] flex flex-col items-center text-center"
+		>
+			<span
+				class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4"
+				>Soft CTA</span
+			>
+			<h2 class="text-3xl lg:text-4xl font-black text-[var(--text)] mb-6">
+				If this decision matters, clarity is worth a few minutes
+			</h2>
+			<p class="text-xl text-[var(--text-muted)] mb-12 max-w-2xl">
+				The Free Business Health Check provides a high-level snapshot —
+				designed to surface early signals and help you decide what
+				deserves deeper analysis.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 mb-8">
+				<CTABlock
+					href="https://go.should-i.ai/health-check?segment=pre-launch"
+					variant="primary"
+					class="px-10 py-5 text-lg font-bold"
+				>
+					Validate My Idea
+				</CTABlock>
+				<CTABlock
+					href="https://go.should-i.ai/health-check?segment=existing"
+					variant="primary"
+					class="px-10 py-5 text-lg font-bold"
+				>
+					Assess My Business
+				</CTABlock>
+			</div>
+			<p
+				class="mt-4 text-xs font-bold text-[var(--text-muted)] tracking-widest uppercase"
+			>
+				No obligation. Real insight. Built for decision-makers.
 			</p>
 		</div>
 	</Section>

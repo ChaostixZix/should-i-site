@@ -1,12 +1,15 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
 	title: string;
 	description?: string;
 }
 
-const { title, description = "Decision intelligence for high-stakes business investments." } = Astro.props;
+const {
+	title,
+	description = "Decision intelligence for high-stakes business investments.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -21,25 +24,55 @@ const { title, description = "Decision intelligence for high-stakes business inv
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<script>
-			import { init } from '@gusb.dev/react-grab';
+			import { init } from "@gusb.dev/react-grab";
 			init();
 		</script>
-		<nav class="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur-sm">
-			<div class="mx-auto flex h-20 max-w-[var(--container-max)] items-center justify-between px-6 lg:px-[var(--container-padding)]">
+		<nav
+			class="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur-sm"
+		>
+			<div
+				class="mx-auto flex h-20 max-w-[var(--container-max)] items-center justify-between px-6 lg:px-[var(--container-padding)]"
+			>
 				<a href="/" class="flex items-center gap-2">
-					<img src="/logo.png" alt="Should-I Logo" class="h-16 w-auto" />
+					<img
+						src="/logo.png"
+						alt="Should-I Logo"
+						class="h-16 w-auto"
+					/>
 				</a>
 				<div class="hidden items-center gap-8 md:flex">
-					<a href="/#process" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Process</a>
-					<a href="/#industries" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Industries</a>
-					<a href="/#about" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">About</a>
+					<a
+						href="/#process"
+						class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+						>How it works</a
+					>
+					<a
+						href="/example-report"
+						class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+						>Example Report</a
+					>
+					<a
+						href="/pricing"
+						class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+						>Pricing</a
+					>
 				</div>
-				<a href="https://go.should-i.ai/health-check" class="flex items-center justify-center rounded bg-[var(--accent)] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
+
+				<a
+					href="https://go.should-i.ai/health-check"
+					class="flex items-center justify-center rounded bg-[var(--accent)] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
+				>
 					Free Business Health Check
 				</a>
 			</div>
@@ -49,53 +82,116 @@ const { title, description = "Decision intelligence for high-stakes business inv
 			<slot />
 		</main>
 
-		<footer class="bg-white border-t border-[var(--border)] pt-20 pb-12 px-6 lg:px-[var(--container-padding)]">
+		<footer
+			class="bg-white border-t border-[var(--border)] pt-20 pb-12 px-6 lg:px-[var(--container-padding)]"
+		>
 			<div class="mx-auto max-w-[var(--container-max)]">
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
 					<!-- Brand Column -->
 					<div class="md:col-span-4">
 						<a href="/" class="inline-block mb-6">
-							<img src="/logo.png" alt="Should-I Logo" class="h-12 w-auto" />
+							<img
+								src="/logo.png"
+								alt="Should-I Logo"
+								class="h-12 w-auto"
+							/>
 						</a>
-						<p class="text-[var(--text-muted)] text-sm leading-relaxed max-w-xs">
-							Helping business owners make high-stakes decisions with clarity through decision intelligence, not AI magic.
+						<p
+							class="text-[var(--text-muted)] text-sm leading-relaxed max-w-xs"
+						>
+							Helping business owners make high-stakes decisions
+							with clarity through decision intelligence, not AI
+							magic.
 						</p>
 					</div>
 
 					<!-- Links Columns -->
-					<div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
+					<div
+						class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8"
+					>
 						<div>
-							<h4 class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6">Product</h4>
+							<h4
+								class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6"
+							>
+								Product
+							</h4>
 							<ul class="space-y-4 text-sm">
-								<li><a href="/#process" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">How it works</a></li>
-								<li><a href="/industries" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Industries</a></li>
-								<li><a href="/example-report" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Example Report</a></li>
+								<li>
+									<a
+										href="/#process"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>How it works</a>
+								</li>
+								<li>
+									<a
+										href="/industries"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Industries</a>
+								</li>
+								<li>
+									<a
+										href="/example-report"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Example Report</a>
+								</li>
 							</ul>
 						</div>
 						<div>
-							<h4 class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6">Company</h4>
+							<h4
+								class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6"
+							>
+								Company
+							</h4>
 							<ul class="space-y-4 text-sm">
-								<li><a href="/#about" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Our Philosophy</a></li>
-								<li><a href="/contact" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Contact</a></li>
+								<li>
+									<a
+										href="/#about"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Our Philosophy</a>
+								</li>
+								<li>
+									<a
+										href="/contact"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Contact</a>
+								</li>
 							</ul>
 						</div>
 						<div>
-							<h4 class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6">Legal</h4>
+							<h4
+								class="text-xs font-bold uppercase tracking-widest text-[var(--text)] mb-6"
+							>
+								Legal
+							</h4>
 							<ul class="space-y-4 text-sm">
-								<li><a href="/privacy" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Privacy Policy</a></li>
-								<li><a href="/terms" class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Terms of Service</a></li>
+								<li>
+									<a
+										href="/privacy"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Privacy Policy</a>
+								</li>
+								<li>
+									<a
+										href="/terms"
+										class="text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+										>Terms of Service</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 
 				<!-- Bottom Bar -->
-				<div class="pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row justify-between items-center gap-4">
+				<div
+					class="pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row justify-between items-center gap-4"
+				>
 					<div class="text-xs text-[var(--text-muted)] font-medium">
 						© {new Date().getFullYear()} Should-I Inc. All rights reserved.
 					</div>
 					<div class="flex items-center gap-6">
-						<span class="text-[10px] font-bold uppercase tracking-tighter text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">
+						<span
+							class="text-[10px] font-bold uppercase tracking-tighter text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded"
+						>
 							Decision Intelligence
 						</span>
 					</div>
